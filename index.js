@@ -68,7 +68,7 @@ const findNumber = (prev, toFind, diff, data, socket) => {
 const startMining = async (socket, data) => {
     // start the mining process
     let promiseSocket = new PromiseSocket(socket);
-    promiseSocket.setTimeout(5000);
+    promiseSocket.setTimeout(50000);
     while (true) {
         try {
             socket.write("JOB," + user + ",MEDIUM," + mining_key);
